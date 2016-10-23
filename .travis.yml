@@ -1,0 +1,26 @@
+---
+language: python
+python: "2.7"
+
+sudo: required
+dist: trusty
+
+addons:
+  apt:
+    sources:
+    - sourceline: ppa:ansible/ansible
+    packages:
+    - ansible
+
+before_install:
+- ansible --version
+- cd tests
+
+install:
+- ansible-galaxy install -r roles.yml
+
+script:
+- ansible-playbook -i inventory-local test.yml
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

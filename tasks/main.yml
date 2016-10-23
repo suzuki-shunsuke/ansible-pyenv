@@ -1,0 +1,19 @@
+---
+# tasks file for pyenv
+- name: Clone pyenv repository
+  ghq:
+    executable: "{{pyenv_ghq_executable}}"
+    name: yyuu/pyenv
+    update: yes
+- name: Notice
+  debug:
+    msg: "Install pyenv install dependencies."
+- name: Notice
+  debug:
+    msg: "export PYENV_ROOT=$GHQ_ROOT/github.com/yyuu/pyenv"
+- name: Notice
+  debug:
+    msg: "export PATH=$PYENV_ROOT/bin:$PATH"
+- name: Notice
+  debug:
+    msg: "eval \"$(pyenv init -)\""

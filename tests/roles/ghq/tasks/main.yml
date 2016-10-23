@@ -1,0 +1,6 @@
+---
+- name: Install ghq
+  go:
+    name: github.com/motemen/ghq
+  environment:
+    GOPATH: "{{ansible_env.GOPATH | default('{}/.go'.format(ansible_env.HOME))}}"
