@@ -1,12 +1,12 @@
 ---
 # tasks file for pyenv
 - name: ghq root
-  shell: "{{pyenv_ghq_executable}} root"
+  shell: "{{ghq_executable}} root"
   register: ghq_root
   changed_when: false
 - name: Clone pyenv repository
   ghq:
-    executable: "{{pyenv_ghq_executable}}"
+    executable: "{{ghq_executable}}"
     name: yyuu/pyenv
     update: yes
 - name: Check ~/.pyenv
