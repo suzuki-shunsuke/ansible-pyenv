@@ -14,7 +14,7 @@
     path: "{{ pyenv_root }}"
   register: st
 - name: Back up $PYENV_ROOT
-  shell: "mv {{ansible_env.HOME}}/.pyenv {{ansible_env.HOME}}/.pyenv.{{ansible_date_time.date}}-{{ansible_date_time.hour}}-{{ansible_date_time.minute}}-{{ansible_date_time.second}}"
+  shell: "mv {{ pyenv_root }} {{ pyenv_root }}.{{ansible_date_time.date}}-{{ansible_date_time.hour}}-{{ansible_date_time.minute}}-{{ansible_date_time.second}}"
   when: st.stat.exists and not st.stat.islnk
 - name: Make symbolic links
   file:
