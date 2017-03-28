@@ -20,7 +20,7 @@ install:
 - ansible-galaxy install -r roles.yml
 
 script:
-- ansible-playbook -i inventory-local test.yml
+- ansible-playbook -i localhost test.yml
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/

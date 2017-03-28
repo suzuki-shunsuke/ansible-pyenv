@@ -7,19 +7,19 @@
 - name: Clone pyenv repository
   ghq:
     executable: "{{ghq_executable}}"
-    name: yyuu/pyenv
+    name: pyenv/pyenv
     update: yes
-- name: Check ~/.pyenv
+- name: Check $PYENV_ROOT
   stat:
-    path: "{{ansible_env.HOME}}/.pyenv"
+    path: "{{ pyenv_root }}"
   register: st
-- name: Back up ~/.pyenv
+- name: Back up $PYENV_ROOT
   shell: "mv {{ansible_env.HOME}}/.pyenv {{ansible_env.HOME}}/.pyenv.{{ansible_date_time.date}}-{{ansible_date_time.hour}}-{{ansible_date_time.minute}}-{{ansible_date_time.second}}"
   when: st.stat.exists and not st.stat.islnk
 - name: Make symbolic links
   file:
-    src: "{{ghq_root.stdout}}/github.com/yyuu/pyenv"
-    dest: "{{ansible_env.HOME}}/.pyenv"
+    src: "{{ghq_root.stdout}}/github.com/pyenv/pyenv"
+    dest: "{{ pyenv_root }}"
     state: link
 - name: Notice
   debug:

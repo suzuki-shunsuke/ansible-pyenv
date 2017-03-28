@@ -1,3 +1,4 @@
 ---
 # defaults file for pyenv
 ghq_executable: ghq
+pyenv_root: "{{ ansible_env.get('PYENV_ROOT', '{}/.pyenv'.format(ansible_env.HOME)) }}"
