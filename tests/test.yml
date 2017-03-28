@@ -1,7 +1,12 @@
 ---
 - include: setup.yml
 - hosts: default
+  environment:
+    PYENV_ROOT: "{{'{}/pyenv-root-env'.format(ansible_env.HOME)}}"
+  vars:
+    ghq_executable: "{{'{}/bin/ghq'.format(ansible_env.get('GOPATH', '{}/.go'.format(ansible_env.HOME)))}}"
   roles:
   - suzuki-shunsuke.ghq-module
   - role: ansible-pyenv
-    ghq_executable: "{{'{}/bin/ghq'.format(ansible_env.get('GOPATH', '{}/.go'.format(ansible_env.HOME)))}}"
+  - role: ansible-pyenv
+    pyenv_root: "{{'{}/pyenv_root'.format(ansible_env.HOME)}}"
