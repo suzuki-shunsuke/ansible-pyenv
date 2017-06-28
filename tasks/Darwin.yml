@@ -1,0 +1,6 @@
+- name: Install build dependencies
+  homebrew:
+    name: "{{ item }}"
+  items: "{{ pyenv_darwin_build_dependencies }}"
+  become: "{{ pyenv_nonroot }}"
+  when: pyenv_is_dependencies_installed

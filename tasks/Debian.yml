@@ -1,0 +1,7 @@
+- name: Install build dependencies
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  items: "{{ pyenv_debian_build_dependencies }}"
+  become: "{{ pyenv_nonroot }}"
+  when: pyenv_is_dependencies_installed
