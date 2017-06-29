@@ -1,4 +1,4 @@
-# pyenv
+# ansible-pyenv
 
 [![Build Status](https://travis-ci.org/suzuki-shunsuke/ansible-pyenv.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/ansible-pyenv)
 
