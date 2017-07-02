@@ -1,9 +1,9 @@
 ---
 - hosts: all
   roles:
-  - git
+  - role: geerlingguy.git
+    become: "{{ (ansible_env.USER is undefined) | ternary(ansible_env.HOME != '/root', ansible_env.USER != 'root') }}"
   - role: ansible-pyenv
-    # pyenv_rc_path: "{{ ansible_env.HOME }}/.bashrc"
-    pyenv_rc_path: "{{ ansible_env.HOME }}/.profile"
+    pyenv_rc_path: "{{ ansible_env.HOME }}/.bashrc"
     pyenv_root: ~/pyenv
     pyenv_is_dependencies_installed: yes
