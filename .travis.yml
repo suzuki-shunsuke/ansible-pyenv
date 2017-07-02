@@ -17,6 +17,9 @@ before_install:
 - ansible --version
 - cd tests
 
+install:
+- ansible-galaxy install -r roles.yml
+
 script:
 - ansible-playbook -i localhost test.yml
 
