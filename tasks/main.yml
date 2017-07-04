@@ -6,8 +6,10 @@
     state: directory
 - name: Clone pyenv repository
   git:
-    repo: https://github.com/pyenv/pyenv
+    repo: "{{ pyenv_repo }}"
     dest: "{{ pyenv_root }}"
+    version: "{{ pyenv_version }}"
+    update: "{{ pyenv_update }}"
 - block:
   - name: Add configurations to ~/.bashrc, ~/.profile, or ~/.zshrc or etc
     lineinfile:

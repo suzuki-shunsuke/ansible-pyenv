@@ -1,6 +1,9 @@
 ---
 # defaults file for pyenv
 pyenv_root: "{{ ansible_env.get('PYENV_ROOT', '{}/.pyenv'.format(ansible_env.HOME)) }}"
+pyenv_repo: https://github.com/pyenv/pyenv
+pyenv_version: HEAD
+pyenv_update: yes
 pyenv_is_dependencies_installed: no
 pyenv_rc_path: NOT ADD
 pyenv_debian_build_dependencies:
