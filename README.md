@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/suzuki-shunsuke/ansible-pyenv.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/ansible-pyenv)
 
-ansible role to install pyenv.
+ansible role to install [pyenv](https://github.com/pyenv/pyenv).
 
 * [suzuki-shunsuke.pyenv](https://galaxy.ansible.com/suzuki-shunsuke/pyenv/)
 
@@ -44,6 +44,11 @@ Nothing.
     pyenv_darwin_build_dependencies:
     - readline
 ```
+
+## See also
+
+* [suzuki-shunsuke.pyenv-virtualenv](https://github.com/suzuki-shunsuke/ansible-pyenv-virtualenv): ansible role to install pyenv-virtualenv
+* [suzuki-shunsuke.pyenv-module](https://github.com/suzuki-shunsuke/ansible-pyenv-module): ansible module to run `pyenv` command
 
 ## License
 
