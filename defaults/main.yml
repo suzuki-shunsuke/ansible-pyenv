@@ -32,3 +32,6 @@ pyenv_redhat_build_dependencies:
 pyenv_darwin_build_dependencies:
 - readline
 - xz
+pyenv_darwin_additional_build_dependencies: []
+pyenv_redhat_additional_build_dependencies: []
+pyenv_debian_additional_build_dependencies: []

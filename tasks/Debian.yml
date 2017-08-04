@@ -2,6 +2,8 @@
   apt:
     name: "{{ item }}"
     update_cache: yes
-  items: "{{ pyenv_debian_build_dependencies }}"
+  with_flattened:
+  - "{{ pyenv_debian_build_dependencies }}"
+  - "{{ pyenv_debian_additional_build_dependencies }}"
   become: "{{ pyenv_nonroot }}"
   when: pyenv_is_dependencies_installed

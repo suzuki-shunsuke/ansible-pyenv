@@ -23,6 +23,9 @@ pyenv_rc_path | no | "NOT ADD" | By default configuration is not added
 pyenv_darwin_build_dependencies | no | see [defaults/main.yml](https://github.com/suzuki-shunsuke/ansible-pyenv/blob/master/defaults/main.yml) | If pyenv_is_dependencies_installed is "no" this is ignored
 pyenv_redhat_build_dependencies | no | see [defaults/main.yml](https://github.com/suzuki-shunsuke/ansible-pyenv/blob/master/defaults/main.yml) | If pyenv_is_dependencies_installed is "no" this is ignored
 pyenv_debian_build_dependencies | no | see [defaults/main.yml](https://github.com/suzuki-shunsuke/ansible-pyenv/blob/master/defaults/main.yml) | If pyenv_is_dependencies_installed is "no" this is ignored
+pyenv_darwin_additional_build_dependencies | no | [] | If pyenv_is_dependencies_installed is "no" this is ignored
+pyenv_redhat_additional_build_dependencies | no | [] | If pyenv_is_dependencies_installed is "no" this is ignored
+pyenv_debian_additional_build_dependencies | no | [] | If pyenv_is_dependencies_installed is "no" this is ignored
 
 About build dependencies, see also [here](https://github.com/pyenv/pyenv/wiki/Common-build-problems).
 
