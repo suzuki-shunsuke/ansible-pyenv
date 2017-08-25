@@ -52,6 +52,10 @@ Nothing.
 
 See [CHANGELOG.md](CHANGELOG.md).
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## See also
 
 * [suzuki-shunsuke.pyenv-virtualenv](https://github.com/suzuki-shunsuke/ansible-pyenv-virtualenv): ansible role to install pyenv-virtualenv
