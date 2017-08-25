@@ -20,7 +20,8 @@
   - name: Add configurations to ~/.bashrc, ~/.profile, or ~/.zshrc or etc
     lineinfile:
       dest: "{{ pyenv_rc_path }}"
-      line: 'export PATH=$PYENV_ROOT/bin:$PATH'
+      line: 'export PATH="$PYENV_ROOT/bin:$PATH"'
+      regexp: '^\s*export\s*PATH="?\$PYENV_ROOT/bin:\$PATH"?'
       create: yes
   - name: Add configurations to ~/.bashrc, ~/.profile, or ~/.zshrc or etc
     lineinfile:
