@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.2.4"></a>
+## [3.2.4](https://github.com/suzuki-shunsuke/ansible-pyenv/compare/v3.2.3...v3.2.4) (2017-08-28)
+
+
+### Bug Fixes
+
+* add double quotes for PATH variable ([a58fb5f](https://github.com/suzuki-shunsuke/ansible-pyenv/commit/a58fb5f))
+
+
+
 <a name="3.2.3"></a>
 ## [3.2.3](https://github.com/suzuki-shunsuke/ansible-pyenv/compare/v3.2.2...v3.2.3) (2017-08-04)
 
