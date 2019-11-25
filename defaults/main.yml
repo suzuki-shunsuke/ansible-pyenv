@@ -7,31 +7,31 @@ pyenv_update: yes
 pyenv_is_dependencies_installed: no
 pyenv_rc_path: NOT ADD
 pyenv_debian_build_dependencies:
-- make
-- build-essential
-- libssl-dev
-- zlib1g-dev
-- libbz2-dev
-- libreadline-dev
-- libsqlite3-dev
-- wget
-- curl
-- llvm
-- libncurses5-dev
-- libncursesw5-dev
-- xz-utils
-- tk-dev
+  - make
+  - build-essential
+  - libssl-dev
+  - zlib1g-dev
+  - libbz2-dev
+  - libreadline-dev
+  - libsqlite3-dev
+  - wget
+  - curl
+  - llvm
+  - libncurses5-dev
+  - libncursesw5-dev
+  - xz-utils
+  - tk-dev
 pyenv_redhat_build_dependencies:
-- zlib-devel
-- bzip2
-- bzip2-devel
-- readline-devel
-- sqlite
-- sqlite-devel
-- openssl-devel
+  - zlib-devel
+  - bzip2
+  - bzip2-devel
+  - readline-devel
+  - sqlite
+  - sqlite-devel
+  - openssl-devel
 pyenv_darwin_build_dependencies:
-- readline
-- xz
+  - readline
+  - xz
 pyenv_darwin_additional_build_dependencies: []
 pyenv_redhat_additional_build_dependencies: []
 pyenv_debian_additional_build_dependencies: []

@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: Suzuki Shunsuke
   description: Install pyenv.
@@ -5,11 +6,11 @@ galaxy_info:
   min_ansible_version: 2.4
   github_branch: master
   platforms:
-  - name: GenericLinux
-  - name: MacOSX
+    - name: GenericLinux
+    - name: MacOSX
 
   galaxy_tags:
-  - python
-  - pyenv
+    - python
+    - pyenv
 
 dependencies: []

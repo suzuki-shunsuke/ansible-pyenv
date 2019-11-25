@@ -1,9 +1,10 @@
+---
 - name: Install build dependencies
   yum:
     name: "{{ item }}"
     update_cache: yes
   with_flattened:
-  - "{{ pyenv_redhat_build_dependencies }}"
-  - "{{ pyenv_redhat_additional_build_dependencies }}"
+    - "{{ pyenv_redhat_build_dependencies }}"
+    - "{{ pyenv_redhat_additional_build_dependencies }}"
   become: "{{ pyenv_nonroot }}"
   when: pyenv_is_dependencies_installed
