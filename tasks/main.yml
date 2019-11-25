@@ -16,18 +16,18 @@
         dest: "{{ pyenv_rc_path }}"
         line: 'export PYENV_ROOT="{{ pyenv_root }}"'
         regexp: '^export PYENV_ROOT='
-        create: yes
+        create: true
     - name: Add configurations to ~/.bashrc, ~/.profile, or ~/.zshrc or etc
       lineinfile:
         dest: "{{ pyenv_rc_path }}"
         line: 'export PATH="$PYENV_ROOT/bin:$PATH"'
         regexp: '^\s*export\s*PATH="?\$PYENV_ROOT/bin:\$PATH"?'
-        create: yes
+        create: true
     - name: Add configurations to ~/.bashrc, ~/.profile, or ~/.zshrc or etc
       lineinfile:
         dest: "{{ pyenv_rc_path }}"
         line: 'eval "$(pyenv init -)"'
-        create: yes
+        create: true
   when: pyenv_rc_path != "NOT ADD"
 - include_tasks: "{{ pyenv_os_families.get(ansible_os_family, 'default') }}.yml"
   when: pyenv_is_dependencies_installed and ansible_os_family in pyenv_os_families

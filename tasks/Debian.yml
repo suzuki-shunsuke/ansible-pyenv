@@ -2,7 +2,7 @@
 - name: Install build dependencies
   apt:
     name: "{{ item }}"
-    update_cache: yes
+    update_cache: true
   with_flattened:
     - "{{ pyenv_debian_build_dependencies }}"
     - "{{ pyenv_debian_additional_build_dependencies }}"
