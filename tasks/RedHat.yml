@@ -1,10 +1,7 @@
 ---
 - name: Install build dependencies
   yum:
-    name: "{{ item }}"
+    name: "{{ query('flattened', ['{{ pyenv_redhat_build_dependencies }}', '{{ pyenv_redhat_additional_build_dependencies }}']) }}"
     update_cache: true
-  with_flattened:
-    - "{{ pyenv_redhat_build_dependencies }}"
-    - "{{ pyenv_redhat_additional_build_dependencies }}"
   become: true
   when: pyenv_is_dependencies_installed
