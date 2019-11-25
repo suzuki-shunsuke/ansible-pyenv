@@ -4,4 +4,4 @@
     name: "{{ query('flattened', ['{{ pyenv_debian_build_dependencies }}', '{{ pyenv_debian_additional_build_dependencies }}']) }}"
     update_cache: true
   become: true
-  when: pyenv_is_dependencies_installed
+  when: pyenv_is_dependencies_installed|bool

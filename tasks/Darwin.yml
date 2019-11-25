@@ -2,4 +2,4 @@
 - name: Install build dependencies
   homebrew:
     name: "{{ query('flattened', ['{{ pyenv_darwin_build_dependencies }}', '{{ pyenv_darwin_additional_build_dependencies }}']) }}"
-  when: pyenv_is_dependencies_installed
+  when: pyenv_is_dependencies_installed|bool
