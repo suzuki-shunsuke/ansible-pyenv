@@ -6,5 +6,5 @@
   with_flattened:
     - "{{ pyenv_debian_build_dependencies }}"
     - "{{ pyenv_debian_additional_build_dependencies }}"
-  become: "{{ pyenv_nonroot }}"
+  become: true
   when: pyenv_is_dependencies_installed
