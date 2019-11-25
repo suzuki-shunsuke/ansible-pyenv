@@ -1,27 +1,21 @@
 ---
 language: python
-python: "2.7"
+python: "3.8"
 
 sudo: required
-dist: trusty
-group: deprecated-2017Q2
+dist: bionic
 
 addons:
   apt:
-    sources:
-    - sourceline: ppa:ansible/ansible
     packages:
-    - ansible
-
-before_install:
-- ansible --version
-- cd tests
+      - python-pip
+      - libssl-dev
 
 install:
-- ansible-galaxy install -r roles.yml
+  - pip install molecule docker
 
 script:
-- ansible-playbook -i localhost test.yml
+  - molecule test
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
