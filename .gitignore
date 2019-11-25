@@ -5,6 +5,7 @@
 *.retry
 tests/_roles/*
 !tests/_roles/.gitkeep
+__pycache__
 
 # Node.js
 node_modules
