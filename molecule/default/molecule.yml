@@ -1,0 +1,31 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: molecule/default/roles.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: instance
+    image: suzukishunsuke/ansible-test-centos:0.1.0
+    privileged: true
+    command: /sbin/init
+    env:
+      USER: foo
+#   - name: ubuntu
+#     image: ubuntu:18.04
+#     privileged: true
+#     env:
+#       USER: root
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+  options:
+    user: foo
+verifier:
+  name: testinfra
+  lint:
+    name: flake8
